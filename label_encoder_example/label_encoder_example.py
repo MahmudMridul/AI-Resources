@@ -6,16 +6,16 @@ pd.set_option("display.width", None)
 
 from sklearn.preprocessing import LabelEncoder
 
-data = pd.read_csv("Datasets/play_tennis.csv")
+data = pd.read_csv("datasets/play_tennis.csv")
 
-encoder = LabelEncoder()
+label_encoder = LabelEncoder()
+outlook_encoder = LabelEncoder()
 
-print("Before Encoding: ")
-print(data)
-
-data['PlayTennis'] = encoder.fit_transform(data['PlayTennis'])
+data['PlayTennis'] = label_encoder.fit_transform(data['PlayTennis'])
+data["Outlook"] = outlook_encoder.fit_transform(data["Outlook"])
 
 print("After Encoding: ")
 print(data)
 
-print(encoder.classes_)
+print(label_encoder.classes_)
+print(outlook_encoder.classes_)
