@@ -17,9 +17,13 @@ print(data.head(10))
 # columns = data.columns.tolist()
 # print(columns)
 
-# get values of a column
-names = data["name"]
-print(names)
+# get values of a column as dtype
+# names = data["name"]
+# print(names)
+
+# get values of a column as a list
+# name_list = data["name"].tolist()
+# print(name_list)
 
 # get values of a column and range of rows
 # first_ten_names = data["Name"][0:10]
